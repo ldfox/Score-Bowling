@@ -1,0 +1,1742 @@
+<?xml version="1.0"?>
+<!-- Database Schema Designer File -->
+<DatabaseSchema strFormat="1.0">
+
+	<DatabaseSchemaProperties>
+		
+		<strName>FinalProjectPreWork</strName>
+		
+		<strVersion>1.0.0</strVersion>
+		
+		<strAuthor>Laurie Fox</strAuthor>
+		
+		<dtmCreated>2015/03/07 04:13:31 PM</dtmCreated>
+		
+		<dtmLastModified>2016/07/19 12:37:00 PM</dtmLastModified>
+		
+		<strGenerateTo>NOTEPAD</strGenerateTo>
+		
+		<strGenerateToFilePath>C:\Users\Laurie\Documents\IT 112-400\DBSD\Generated_SQL\FinalProjectPreWork\</strGenerateToFilePath>
+		
+		<strGenerateToFileFilename>FinalProjectPreWork</strGenerateToFileFilename>
+		
+		<strDescription></strDescription>
+		
+		<strBeforeScripts>
+
+		</strBeforeScripts>
+
+		<strAfterScripts>
+
+		</strAfterScripts>
+
+		<Database lngType="0"></Database>
+		
+		<PageSetup lngHeightInPages="2" lngWidthInPages="2" sngPageHeight="11" sngPageWidth="8.5" sngMargin="0.5" lngPageOrientation="1" blnShowPageNumbers="True" blnShowPageLines="True" blnPrintHeaderAndFooter="True" strPrintHeader="&lt;Filename&gt;     &lt;Version&gt;     &lt;PrintDate&gt;" strPrintFooter="&lt;PageNumber&gt; of &lt;PageCount&gt;" blnLockFormatting="False"></PageSetup>
+		
+		<CommentAppearance strFontName="MS Sans Serif" sngFontSize="10" lngFontColor="0" lngBackColor="14155775" blnDisplayIcon="False" blnDisplayOptional="False"></CommentAppearance>
+		
+		<ForeignKeyAppearance strFontName="" sngFontSize="0" lngFontColor="0" lngBackColor="0" blnDisplayIcon="False" blnDisplayOptional="False"></ForeignKeyAppearance>
+		
+		<TableAppearance strFontName="MS Sans Serif" sngFontSize="10" lngFontColor="0" lngBackColor="15724527" blnDisplayIcon="True" blnDisplayOptional="False"></TableAppearance>
+		
+		<ViewAppearance strFontName="MS Sans Serif" sngFontSize="10" lngFontColor="0" lngBackColor="16439988" blnDisplayIcon="True" blnDisplayOptional="False"></ViewAppearance>
+		
+		<lngUndoRedoLimit>20</lngUndoRedoLimit>
+		
+		<blnDisplayApplicationWarnings>True</blnDisplayApplicationWarnings>
+		
+		<blnUseCustomNames>False</blnUseCustomNames>
+		
+		<blnUsePrimaryKeyPrefix>True</blnUsePrimaryKeyPrefix>
+		
+		<blnAutoAddPrimaryKeyColumn>True</blnAutoAddPrimaryKeyColumn>
+		
+		<blnMakeIdentityColumn>False</blnMakeIdentityColumn>
+		
+		<blnAutoAddStringColumn>True</blnAutoAddStringColumn>
+		
+		<blnSchemaResetForeignKeysOnTableDrag>True</blnSchemaResetForeignKeysOnTableDrag>
+		
+	</DatabaseSchemaProperties>
+
+	<!-- ================================================================================ -->
+	<!-- Naming Convention -->
+	<!-- ================================================================================ -->
+	<NamingConvention strFilename="Default Naming Convention.xnc" strFormat="1.0">
+
+		<NamingConventionProperties>
+			
+			<Name>Default Naming Convention</Name>
+			
+			<Description>Default Naming Convention</Description>
+			
+			<Version>1.0.0</Version>
+			
+		</NamingConventionProperties>
+		
+		<NamingConventionItems>
+			
+			<CheckConstraint strSuffix="_CK#"></CheckConstraint>
+			
+			<ClusteredIndex strSuffix="_CI"></ClusteredIndex>
+			
+			<ForeignKeyConstraint strSuffix="_FK#"></ForeignKeyConstraint>
+			
+			<Function strPrefix="udf"></Function>
+			
+			<NonClusteredIndex strSuffix="_NI"></NonClusteredIndex>
+			
+			<NotNullConstraint strSuffix="_NN"></NotNullConstraint>
+			
+			<PrimaryKeyConstraint strSuffix="_PK"></PrimaryKeyConstraint>
+			
+			<StoredProcedure strPrefix="usp"></StoredProcedure>
+			
+			<Table strPrefix="T" strSuffix="%s"></Table>
+			
+			<Trigger strSuffix="_TR#"></Trigger>
+			
+			<UniqueConstraint strSuffix="_UN"></UniqueConstraint>
+			
+			<View strPrefix="V" strSuffix="%s"></View>
+			
+			<DataType strPrefix="bln" strType="Bit"></DataType>
+			
+			<DataType strPrefix="byt" strType="TinyInt"></DataType>
+			
+			<DataType strPrefix="sht" strType="SmallInt"></DataType>
+			
+			<DataType strPrefix="int" strType="Integer"></DataType>
+			
+			<DataType strPrefix="lng" strType="BigInt"></DataType>
+			
+			<DataType strPrefix="dec" strType="Decimal" enuSize="2" lngPrecision="38" lngScale="0"></DataType>
+			
+			<DataType strPrefix="num" strType="Numeric" enuSize="2" lngPrecision="38" lngScale="0"></DataType>
+			
+			<DataType strPrefix="sng" strType="Float" enuSize="2" lngPrecision="8" lngScale="0"></DataType>
+			
+			<DataType strPrefix="dbl" strType="Float" enuSize="2" lngPrecision="53" lngScale="0"></DataType>
+			
+			<DataType strPrefix="cur" strType="Money"></DataType>
+			
+			<DataType strPrefix="mon" strType="Money"></DataType>
+			
+			<DataType strPrefix="dtm" strType="DateTime"></DataType>
+			
+			<DataType strPrefix="chr" strType="Char" enuSize="1" lngLength="50"></DataType>
+			
+			<DataType strPrefix="str" strType="VarChar" enuSize="1" lngLength="50"></DataType>
+			
+			<DataType strPrefix="txt" strType="Text"></DataType>
+			
+			<DataType strPrefix="tmp" strType="Timestamp"></DataType>
+			
+			<DataType strPrefix="tsp" strType="Timestamp"></DataType>
+			
+			<DataType strPrefix="rv" strType="RowVersion"></DataType>
+			
+			<DataType strPrefix="nchr" strType="nChar" enuSize="1" lngLength="50"></DataType>
+			
+			<DataType strPrefix="nstr" strType="nVarChar" enuSize="1" lngLength="50"></DataType>
+			
+			<DataType strPrefix="ntxt" strType="nText" blnNullable="True"></DataType>
+			
+			<DataType strPrefix="img" strType="Image" blnNullable="True"></DataType>
+			
+			<DataType strPrefix="bin" strType="Binary" enuSize="1" lngLength="8000" blnNullable="True"></DataType>
+			
+			<DataType strPrefix="vbin" strType="VarBinary" enuSize="1" lngLength="8000" blnNullable="True"></DataType>
+			
+			<DataType strPrefix="id" strType="Integer" blnIdentity="True" lngSeed="1" lngIncrement="1"></DataType>
+			
+		</NamingConventionItems>
+		
+	</NamingConvention>
+	
+	<DatabaseSchemaObjects>
+		
+		<!-- ================================================================================ -->
+		<!-- Rules -->
+		<!-- ================================================================================ -->
+		<Rules>
+		
+		</Rules>
+		
+		<!-- ================================================================================ -->
+		<!-- Types -->
+		<!-- ================================================================================ -->
+		<Types>
+		
+		</Types>
+		
+		<!-- ================================================================================ -->
+		<!-- Tables -->
+		<!-- ================================================================================ -->
+		<Tables>
+			
+			<!-- TYears -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>Year</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>TRUE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intyearID">
+						
+						<strColumnName>intyearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="stryear">
+						
+						<strColumnName>stryear</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="16" lngLeft="29"></Display>
+			
+			</Table>
+			
+			<!-- TLeagues -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>League</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>TRUE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strLeague">
+						
+						<strColumnName>strLeague</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="16" lngLeft="144"></Display>
+			
+			</Table>
+			
+			<!-- TYearLeagues -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName></strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>TRUE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix>YearLeague</strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeaguePresidentID">
+						
+						<strColumnName>intLeaguePresidentID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="121" lngLeft="55"></Display>
+			
+			</Table>
+			
+			<!-- TTeams -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>Team</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>TRUE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strTeam">
+						
+						<strColumnName>strTeam</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="153" lngLeft="238"></Display>
+			
+			</Table>
+			
+			<!-- TPlayers -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>Player</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>TRUE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intPlayerID">
+						
+						<strColumnName>intPlayerID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strFirstName">
+						
+						<strColumnName>strFirstName</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strLastName">
+						
+						<strColumnName>strLastName</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strPhoneNumber">
+						
+						<strColumnName>strPhoneNumber</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strAddress">
+						
+						<strColumnName>strAddress</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="100">UseLength</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="158" lngLeft="528"></Display>
+			
+			</Table>
+			
+			<!-- TYearLeagueTeams -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>YearLeagueTeam</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamCaptainID">
+						
+						<strColumnName>intTeamCaptainID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="246" lngLeft="87"></Display>
+			
+			</Table>
+			
+			<!-- TYearLeagueTeamPlayers -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>YearLeagueTeamPlayer</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intPlayerID">
+						
+						<strColumnName>intPlayerID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="289" lngLeft="366"></Display>
+			
+			</Table>
+			
+			<!-- TYearLeagueTeamGames -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>YearLeagueTeamGame</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intGameIndex">
+						
+						<strColumnName>intGameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intWeekIndex">
+						
+						<strColumnName>intWeekIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="strVenue">
+						
+						<strColumnName>strVenue</strColumnName>
+						
+						<strDataType>VarChar</strDataType>
+						
+						<strSize lngLength="50">UseLength</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="377" lngLeft="101"></Display>
+			
+			</Table>
+			
+			<!-- TPlayerGames -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>PlayerGame</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intPlayerID">
+						
+						<strColumnName>intPlayerID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intGameIndex">
+						
+						<strColumnName>intGameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intWeekIndex">
+						
+						<strColumnName>intWeekIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="544" lngLeft="129"></Display>
+			
+			</Table>
+			
+			<!-- TPlayerGameFrames -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>PlayerGameFrame</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intPlayerID">
+						
+						<strColumnName>intPlayerID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intGameIndex">
+						
+						<strColumnName>intGameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intWeekIndex">
+						
+						<strColumnName>intWeekIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intFrameIndex">
+						
+						<strColumnName>intFrameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="632" lngLeft="278"></Display>
+			
+			</Table>
+			
+			<!-- TPlayerGameFrameThrows -->
+			<Table>
+				
+				<TableProperties>
+					
+					<strRootName>PlayerGameFrameThrow</strRootName>
+					
+					<blnUsePrimaryKeyReferencesPrefix>FALSE</blnUsePrimaryKeyReferencesPrefix>
+					
+					<strPrimaryKeyReferencesPrefix></strPrimaryKeyReferencesPrefix>
+					
+					<blnUseNamingConvention>TRUE</blnUseNamingConvention>
+					
+					<strPrimaryKeyType>Clustered</strPrimaryKeyType>
+					
+					<lngFillFactor>0</lngFillFactor>
+					
+					<strCreateOn></strCreateOn>
+					
+					<strOwner></strOwner>
+					
+					<strCreateTextImageOn></strCreateTextImageOn>
+					
+					<strDescription></strDescription>
+					
+				</TableProperties>
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID">
+						
+						<strColumnName>intYearID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intLeagueID">
+						
+						<strColumnName>intLeagueID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intTeamID">
+						
+						<strColumnName>intTeamID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intPlayerID">
+						
+						<strColumnName>intPlayerID</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intGameIndex">
+						
+						<strColumnName>intGameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intWeekIndex">
+						
+						<strColumnName>intWeekIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intFrameIndex">
+						
+						<strColumnName>intFrameIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intThrowIndex">
+						
+						<strColumnName>intThrowIndex</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<blnPrimaryKey>True</blnPrimaryKey>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+					
+					<Column strColumnName="intPinCount">
+						
+						<strColumnName>intPinCount</strColumnName>
+						
+						<strDataType>Integer</strDataType>
+						
+						<strSize>NotApplicable</strSize>
+						
+					</Column>
+				
+				</Columns>
+				
+				<Display lngTop="712" lngLeft="481"></Display>
+			
+			</Table>
+		
+		</Tables>
+		
+		<!-- ================================================================================ -->
+		<!-- Unique Constraints -->
+		<!-- ================================================================================ -->
+		<UniqueConstraints>
+			
+			<!-- TYearLeagueTeamPlayers_intYearID_intLeagueID_intPlayerID_UN -->
+			<UniqueConstraint strParentTableRootName="YearLeagueTeamPlayer" strRootName="TYearLeagueTeamPlayers_intYearID_intLeagueID_intPlayerID" strIndexType="NonClustered">
+				
+				<Columns>
+					
+					<Column strColumnName="intYearID"></Column>
+					<Column strColumnName="intLeagueID"></Column>
+					<Column strColumnName="intPlayerID"></Column>
+				
+				</Columns>
+			
+			</UniqueConstraint>
+		
+		</UniqueConstraints>
+		
+		<!-- ================================================================================ -->
+		<!-- Foreign Keys -->
+		<!-- ================================================================================ -->
+		<ForeignKeys>
+			
+			<!-- TYearLeagues_TYears_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeague" strParentTableRootName="Year" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagues_TYears">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intyearID" strParentTableColumnName="intyearID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="121" lngLeft="55" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="81" lngLeft="55" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="108" lngLeft="58" lngLength="-12" enuLineType="2"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagues_TLeagues_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeague" strParentTableRootName="League" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagues_TLeagues">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="121" lngLeft="144" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="81" lngLeft="144" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="108" lngLeft="147" lngLength="-12" enuLineType="2"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagueTeams_TYearLeagues_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeagueTeam" strParentTableRootName="YearLeague" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagueTeams_TYearLeagues">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="246" lngLeft="87" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="202" lngLeft="87" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="233" lngLeft="90" lngLength="-16" enuLineType="2"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagueTeams_TTeams_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeagueTeam" strParentTableRootName="Team" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagueTeams_TTeams">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="246" lngLeft="238" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="218" lngLeft="238" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagueTeamPlayers_TYearLeagueTeams_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeagueTeamPlayer" strParentTableRootName="YearLeagueTeam" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagueTeamPlayers_TYearLeagueTeams">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="289" lngLeft="366" lngOrientation="0"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="289" lngLeft="255" lngOrientation="1"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="292" lngLeft="353" lngLength="-83" enuLineType="1"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagueTeamGames_TYearLeagueTeams_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeagueTeamGame" strParentTableRootName="YearLeagueTeam" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagueTeamGames_TYearLeagueTeams">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="377" lngLeft="101" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="343" lngLeft="101" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="364" lngLeft="104" lngLength="-6" enuLineType="2"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TPlayerGames_TYearLeagueTeamGames_FK1 -->
+			<ForeignKey strChildTableRootName="PlayerGame" strParentTableRootName="YearLeagueTeamGame" strConstraint="PrimaryKeyConstraint" strRootName="TPlayerGames_TYearLeagueTeamGames">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+					
+					<Column strChildTableColumnName="intGameIndex" strParentTableColumnName="intGameIndex"></Column>
+					
+					<Column strChildTableColumnName="intWeekIndex" strParentTableColumnName="intWeekIndex"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="544" lngLeft="129" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="506" lngLeft="129" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="531" lngLeft="132" lngLength="-10" enuLineType="2"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TPlayerGames_TYearLeagueTeamPlayers_FK1 -->
+			<ForeignKey strChildTableRootName="PlayerGame" strParentTableRootName="YearLeagueTeamPlayer" strConstraint="PrimaryKeyConstraint" strRootName="TPlayerGames_TYearLeagueTeamPlayers">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+					
+					<Column strChildTableColumnName="intPlayerID" strParentTableColumnName="intPlayerID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="544" lngLeft="254" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="382" lngLeft="366" lngOrientation="0"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="531" lngLeft="257" lngLength="-146" enuLineType="2"></LineSegment>
+					
+						<LineSegment lngTop="385" lngLeft="257" lngLength="96" enuLineType="1"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TPlayerGameFrames_TPlayerGames_FK1 -->
+			<ForeignKey strChildTableRootName="PlayerGameFrame" strParentTableRootName="PlayerGame" strConstraint="PrimaryKeyConstraint" strRootName="TPlayerGameFrames_TPlayerGames">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+					
+					<Column strChildTableColumnName="intPlayerID" strParentTableColumnName="intPlayerID"></Column>
+					
+					<Column strChildTableColumnName="intGameIndex" strParentTableColumnName="intGameIndex"></Column>
+					
+					<Column strChildTableColumnName="intWeekIndex" strParentTableColumnName="intWeekIndex"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="685" lngLeft="278" lngOrientation="0"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="673" lngLeft="250" lngOrientation="3"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="688" lngLeft="265" lngLength="-12" enuLineType="1"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TYearLeagueTeamPlayers_TPlayers_FK1 -->
+			<ForeignKey strChildTableRootName="YearLeagueTeamPlayer" strParentTableRootName="Player" strConstraint="PrimaryKeyConstraint" strRootName="TYearLeagueTeamPlayers_TPlayers">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intPlayerID" strParentTableColumnName="intPlayerID"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="289" lngLeft="500" lngOrientation="2"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="261" lngLeft="528" lngOrientation="0"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="276" lngLeft="503" lngLength="-12" enuLineType="2"></LineSegment>
+					
+						<LineSegment lngTop="264" lngLeft="503" lngLength="12" enuLineType="1"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+			
+			<!-- TPlayerGameFrameThrows_TPlayerGameFrames_FK1 -->
+			<ForeignKey strChildTableRootName="PlayerGameFrameThrow" strParentTableRootName="PlayerGameFrame" strConstraint="PrimaryKeyConstraint" strRootName="TPlayerGameFrameThrows_TPlayerGameFrames">
+				
+				<Columns>
+					
+					<Column strChildTableColumnName="intYearID" strParentTableColumnName="intYearID"></Column>
+					
+					<Column strChildTableColumnName="intLeagueID" strParentTableColumnName="intLeagueID"></Column>
+					
+					<Column strChildTableColumnName="intTeamID" strParentTableColumnName="intTeamID"></Column>
+					
+					<Column strChildTableColumnName="intPlayerID" strParentTableColumnName="intPlayerID"></Column>
+					
+					<Column strChildTableColumnName="intGameIndex" strParentTableColumnName="intGameIndex"></Column>
+					
+					<Column strChildTableColumnName="intWeekIndex" strParentTableColumnName="intWeekIndex"></Column>
+					
+					<Column strChildTableColumnName="intFrameIndex" strParentTableColumnName="intFrameIndex"></Column>
+				
+				</Columns>
+				
+				<Display>
+					
+					<EndPoints>
+					
+						<ChildTableEndPoint lngTop="712" lngLeft="481" lngOrientation="0"></ChildTableEndPoint>
+					
+						<ParentTableEndPoint lngTop="712" lngLeft="451" lngOrientation="1"></ParentTableEndPoint>
+					
+					</EndPoints>
+				
+					<LineSegments>
+					
+						<LineSegment lngTop="715" lngLeft="468" lngLength="-2" enuLineType="1"></LineSegment>
+					
+					</LineSegments>
+					
+				</Display>
+			
+			</ForeignKey>
+		
+		</ForeignKeys>
+		
+		<!-- ================================================================================ -->
+		<!-- Check Constraints -->
+		<!-- ================================================================================ -->
+		<CheckConstraints>
+		
+		</CheckConstraints>
+		
+		<!-- ================================================================================ -->
+		<!-- Views -->
+		<!-- ================================================================================ -->
+		<Views>
+		
+		</Views>
+		
+		<!-- ================================================================================ -->
+		<!-- Indexes -->
+		<!-- ================================================================================ -->
+		<Indexes>
+		
+		</Indexes>
+		
+		<!-- ================================================================================ -->
+		<!-- Stored Procedures -->
+		<!-- ================================================================================ -->
+		<StoredProcedures>
+		
+		</StoredProcedures>
+		
+		<!-- ================================================================================ -->
+		<!-- Functions -->
+		<!-- ================================================================================ -->
+		<Functions>
+		
+		</Functions>
+		
+		<!-- ================================================================================ -->
+		<!-- Triggers -->
+		<!-- ================================================================================ -->
+		<Triggers>
+		
+		</Triggers>
+		
+		<!-- ================================================================================ -->
+		<!-- Comments -->
+		<!-- ================================================================================ -->
+		<Comments>
+		
+		</Comments>
+	
+	</DatabaseSchemaObjects>
+
+	<!-- Permissions -->
+	<DatabaseSchemaPermissions>
+		
+		<!-- Function Permissions -->
+		<FunctionPermissions>
+			
+			<FunctionPermission>
+				
+				<blnDelete>False</blnDelete>
+				
+				<blnExecute>True</blnExecute>
+				
+				<blnInsert>False</blnInsert>
+				
+				<blnSelect>False</blnSelect>
+				
+				<blnUpdate>False</blnUpdate>
+				
+				<strTo>dbo</strTo>
+			
+			</FunctionPermission>
+			
+			<FunctionPermission>
+				
+				<blnDelete>False</blnDelete>
+				
+				<blnExecute>True</blnExecute>
+				
+				<blnInsert>False</blnInsert>
+				
+				<blnSelect>False</blnSelect>
+				
+				<blnUpdate>False</blnUpdate>
+				
+				<strTo>public</strTo>
+			
+			</FunctionPermission>
+		
+		</FunctionPermissions>
+		
+		<!-- Procedure Permissions -->
+		<ProcedurePermissions>
+			
+			<ProcedurePermission>
+				
+				<blnDelete>False</blnDelete>
+				
+				<blnExecute>True</blnExecute>
+				
+				<blnInsert>False</blnInsert>
+				
+				<blnSelect>False</blnSelect>
+				
+				<blnUpdate>False</blnUpdate>
+				
+				<strTo>dbo</strTo>
+			
+			</ProcedurePermission>
+			
+			<ProcedurePermission>
+				
+				<blnDelete>False</blnDelete>
+				
+				<blnExecute>True</blnExecute>
+				
+				<blnInsert>False</blnInsert>
+				
+				<blnSelect>False</blnSelect>
+				
+				<blnUpdate>False</blnUpdate>
+				
+				<strTo>public</strTo>
+			
+			</ProcedurePermission>
+		
+		</ProcedurePermissions>
+		
+		<!-- Table Permissions -->
+		<TablePermissions>
+			
+			<TablePermission>
+				
+				<blnDelete>True</blnDelete>
+				
+				<blnExecute>False</blnExecute>
+				
+				<blnInsert>True</blnInsert>
+				
+				<blnSelect>True</blnSelect>
+				
+				<blnUpdate>True</blnUpdate>
+				
+				<strTo>dbo</strTo>
+			
+			</TablePermission>
+			
+			<TablePermission>
+				
+				<blnDelete>True</blnDelete>
+				
+				<blnExecute>False</blnExecute>
+				
+				<blnInsert>True</blnInsert>
+				
+				<blnSelect>True</blnSelect>
+				
+				<blnUpdate>True</blnUpdate>
+				
+				<strTo>public</strTo>
+			
+			</TablePermission>
+		
+		</TablePermissions>
+		
+		<!-- View Permissions -->
+		<ViewPermissions>
+			
+			<ViewPermission>
+				
+				<blnDelete>True</blnDelete>
+				
+				<blnExecute>False</blnExecute>
+				
+				<blnInsert>True</blnInsert>
+				
+				<blnSelect>True</blnSelect>
+				
+				<blnUpdate>True</blnUpdate>
+				
+				<strTo>dbo</strTo>
+			
+			</ViewPermission>
+			
+			<ViewPermission>
+				
+				<blnDelete>True</blnDelete>
+				
+				<blnExecute>False</blnExecute>
+				
+				<blnInsert>True</blnInsert>
+				
+				<blnSelect>True</blnSelect>
+				
+				<blnUpdate>True</blnUpdate>
+				
+				<strTo>public</strTo>
+			
+			</ViewPermission>
+		
+		</ViewPermissions>
+	
+	</DatabaseSchemaPermissions>
+
+</DatabaseSchema>
